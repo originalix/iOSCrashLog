@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Bugly/Bugly.h>
 
 @interface ViewController ()
 
@@ -16,14 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    BLYLogWarn(@"Bugly 警告信息");
+    BLYLogDebug(@"Bugly Debug");
+    BLYLogDebug(@"----上传信息-----");
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+//---注销Button方法 引起崩溃---
+//- (IBAction)buttonAction:(id)sender {
+//}
 
 @end
